@@ -1,0 +1,210 @@
+
+body {
+    background-image: url("localresources/frutigeraero.jpg");
+    text-align: center;
+    font-family: Courier New;
+
+}
+#poem {
+    background-color: aquamarine;
+    text-align: center;
+
+    border-radius: 10px;
+    border: solid 3px black;
+    margin: 0 auto ;
+    height: 250px;
+    width: 300px;
+
+
+}
+/* Style the topnav */
+ul.topnav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+
+
+}
+ul.topnav li a {
+    display: block;
+    color: wheat;
+    background-color: darkblue;
+    padding: 14px 16px;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+}
+.djswaxyrockdiv {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 400px;
+    margin-bottom: 20px;
+}
+#djswaxyrockheader {
+
+    justify-self: left;
+    color: wheat;
+    background-color: darkblue;
+    width: 350px;
+    padding: 0;
+
+}
+#djswaxyrockheader p {
+    justify-self: left;
+    margin-left: 10px;
+}
+
+#djswaxyrockstext {
+    justify-self: center;
+    background-image: linear-gradient(-45deg, deeppink, blueviolet);
+    width: 330px;
+    height: 80px;
+    text-shadow: 1px 1px black;
+
+
+}
+
+.maincontainer{
+    display: inline-grid;
+    grid-template-columns: max-content max-content max-content;
+
+    gap: 25px;
+
+    margin: 0 auto ;
+
+}
+.headleft{
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    color: wheat;
+    background-color: darkblue;
+    padding: 0;
+
+
+}
+.headright{
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    color: wheat;
+    background-color: darkblue;
+    padding: 0;
+
+}
+.headright p {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.headcenter{
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    color: wheat;
+    background-color: darkblue;
+    padding: 0;
+
+}
+.centerdiv{
+
+    border: solid 10px darkblue;
+    background-color: blueviolet;
+}
+
+.leftdiv{
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    border: solid 10px darkblue;
+
+
+}
+.topleft {
+
+}
+.rightdiv {
+    justify-self: right;
+    display: flex;
+    flex-direction: column;
+
+}
+.righttopdiv{
+    background-color: white;
+    border: solid 10px darkblue;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 350px;
+    height: 350px;
+
+}
+.ChatDiv {
+    background-color: darkblue;
+    display: flex;
+    flex-direction: column;
+}
+.rightbottomdiv {
+    border: solid 10px darkblue;
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+}
+#chattext{
+    display: flex;
+    color: wheat;
+    justify-self: left;
+
+}
+
+.linksbutton {
+    background-color: deeppink;
+    width: 200px; height: 50px;
+    margin: 10px 0;
+}
+#secretbutton {
+    width: 50px; height: 20px;
+    background-color: deeppink;
+}
+#chatplaceholder {
+    margin-top: 10px;
+}
+
+
+
+.GIFS {
+
+    margin: 0px 10px 0px 10px;
+
+}
+a {
+    background-color: white;
+}
+img {
+    box-shadow: black;
+    margin: 0px 10px 0px 10px;
+}
+#chatinput{
+    width: 256px; height: 58px;
+}
+#chatbutton {
+    width: 64px; height: 64px;
+    margin-left: 22px;
+}
+.ChatDivContent {
+    display: flex;
+    flex-direction: row;
+}
+#topchattext{
+    text-shadow: 0.5px 0.5px black;
+    justify-self: center;
+}
+
+#chatlog {
+
+    height: 250px;
+    overflow-y: auto;
+}
+#chatlog p {
+    justify-self: left;
+}
