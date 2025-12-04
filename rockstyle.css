@@ -65,7 +65,37 @@ ul.topnav li a {
 
 
 }
+.CenterBottomDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#tarotbutton {
+    height: 40px;
+    width: 80px;
+    background-color: aquamarine;
+    text-decoration: underline;
+    text-decoration-style: dashed ;
+    margin-bottom: 10px;
+}
+#tarotmeaninglink {
+    display: none;
+    margin-bottom: 10px;
+}
+#TarotRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#TarotCard1 {
 
+}
+#TarotCard2 {
+
+}
+#TarotCard3 {
+
+}
 .maincontainer{
     display: inline-grid;
     grid-template-columns: max-content max-content max-content;

@@ -1,6 +1,7 @@
+
 const Duckbutton = document.getElementById("secretbutton");
 const secretinput = document.getElementById("secretinput");
-
+const chatbutton = document.getElementById("chatbutton");
 let saveddata = [];
 function getdata() {
     fetch("./chatlog.json?v=" + Date.now())
@@ -64,8 +65,57 @@ fetch("./chatlog.json")
             }
 
         })
+// 21 + 14 + 14 + 14 Cards = 63 kort.
+function Tarot() {
+    const TarotRow = document.getElementById("TarotRow");
+    const TarotDataRow = document.getElementById("TarotDataRow");
+    document.getElementById("tarotmeaninglink").style.display = "flex";
+    TarotRow.innerHTML = "";
+    TarotDataRow.innerHTML = "";
+    // Gjør kortene synlige.
+    TarotRow.style.display = "flex";
+
+    fetch("./tarot-images.json", {})
+        .then(response => response.json()) // Parse JSON
+    .then(data => {
+
+        const cards = data.cards;
+        let tarotcard1 = [Math.floor(Math.random() * cards.length),Math.floor(Math.random()*2)];
+        let tarotcard2 = [Math.floor(Math.random() * cards.length),Math.floor(Math.random()*2)];
+        let tarotcard3 = [Math.floor(Math.random() * cards.length),Math.floor(Math.random()*2)];
+        let cardnumber = 0;
+        const valgteKort = [tarotcard1, tarotcard2, tarotcard3];
 
 
+        valgteKort.forEach(kort => {
+            let p = document.createElement("p");
+            let img = document.createElement("img");
+            let kortindex = kort[0];
+            let retning = kort[1];
+            let kortData = cards[kortindex];
+            // Her kan du også legge til mer info, f.eks: kort.name + " (" + kort.number + ")"
+
+            if (retning === 0) {
+                 facing = "Upside Down"
+                img.style.transform = "rotate(180deg)";
+            }
+            else {
+                 facing = "Upright"
+            }
+
+            cardnumber++;
+            p.innerHTML = "Card " + cardnumber +" - "+ "<strong>"+facing+": "+kortData.name +
+                ": " + kortData.arcana+ "</strong>"+" "+ "suit: " + kortData.suit;
+            p.style.color = "white";
+            img.src = "./cards/" + kortData.img;
+            img.width = 175;
+            img.height = 300;
+            TarotDataRow.appendChild(p);
+            TarotRow.appendChild(img);
+        });
+
+    })
+}
         let nameset = 0;
         let username = "";
         if (chatbutton) {
