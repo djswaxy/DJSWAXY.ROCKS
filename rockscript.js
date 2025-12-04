@@ -2,9 +2,8 @@ const Duckbutton = document.getElementById("secretbutton");
 const secretinput = document.getElementById("secretinput");
 
 let saveddata = [];
-
-setInterval(() => {
-    fetch("./chatlog.json")
+function getdata() {
+    fetch("./chatlog.json?v=" + Date.now())
         .then(response => response.json()) // Parse JSON
         .then(data => {
             saveddata = data;
@@ -14,8 +13,8 @@ setInterval(() => {
                 }
             ) // Work with JSON data
         })
+}
 
-},3000)
 fetch("./chatlog.json")
     .then(response => response.json()) // Parse JSON
 
@@ -156,7 +155,7 @@ fetch("./chatlog.json")
                 chatinput.value = "";
             }
         }
-
+        setInterval(getdata,1000);
 // Sjekk etter nye meldinger hvert 2. sekund (2000ms)
 /*setInterval(() => {
     fetch("./chatlog.json")
