@@ -1,5 +1,39 @@
 body {
-background-image: url("localresources/windowsblank.jpg");
+background-image: url("localresources/pixelartwallpaper2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+
+}
+@font-face {
+    font-family: Silkscreen; /* set name */
+    src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
+}
+ul.topnav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 0 50px 0;
+    padding: 0;
+
+
+}
+ul.topnav li a {
+    display: block;
+    color: wheat;
+    background-color: darkblue;
+    padding: 14px 16px;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+}
+#shufflebutton {
+    background-color: darkblue;
+    font-family: Silkscreen, serif;
+    color: wheat;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+    border: none;
 }
 #maincontainer{
     display: flex;
@@ -20,6 +54,15 @@ background-image: url("localresources/windowsblank.jpg");
     list-style-type: none;
 
 }
+#leftcontainer h3{
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: white;
+}
+#leftcontainer p{
+    color: white;
+}
+
 #rightcontainer {
     width: 33%;
     min-height: 100%;
@@ -35,26 +78,75 @@ background-image: url("localresources/windowsblank.jpg");
 
     justify-self: center;
     list-style-type: none;
-    background-color: rgba(97, 208, 220, 0.1);
-    border: solid 3px rgba(97, 208, 220, 0.3);
+    background-color: white;
+    border: solid 3px darkblue;
 }
 #centercontainer p {
     text-align: center;
-    color: white;
+    color: black;
+    text-shadow: 1px 1px 1px blueviolet;
 }
 #centertopcontainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
+#loginpicstop {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+
+
+
+}
+#loginpicstop img {
+    border: solid 1px white;
+}
+#loginpicstop input:checked + img {
+    border-color: #007bff; /* Blue ring indicating selection */
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#loginpicsbottom {
+
+    display: flex;
+    flex-direction: row;
+
+}
+#loginpicsbottom img {
+    border: solid 1px white;
+}
+#loginpicsbottom input:checked + img {
+    border-color: #007bff; /* Blue ring indicating selection */
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#centerheader {
+    background-color:  darkblue;
+    display: flex;
+
+
+}
+#centerheader p {
+    justify-self: left;
+    color: white;
+    margin-left: 10px;
+    text-shadow: 1px 1px 1px blueviolet;
+}
+#centerheader img {
+    justify-self: right;
+}
 #centertopcontainer img {
 
     align-self: center;
-    border: solid 3px rgba(97, 208, 220, 0.3);
+    border: solid 3px;
     height: 64px;
     width: 64px;
+    margin: 5px 5px 5px 5px;
 }
 
 
@@ -69,8 +161,33 @@ background-image: url("localresources/windowsblank.jpg");
 }
 #loginform button {
     margin-top: 10px;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 100, 220, 0.3);
+    margin-bottom: 20px;
+    width: 120px;
+    height: 30px;
+    background-color: darkblue;
 
+
+}
+#loginbutton {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    color: white;
+    justify-self: right;
+
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+#UserNameInput {
+    font-family: "Silkscreen", sans-serif;
+}
+#PasswordInput {
+    font-family: "Silkscreen", sans-serif;
 }

@@ -2,8 +2,13 @@
 body {
     background-image: url("localresources/frutigeraero.jpg");
     text-align: center;
-    font-family: Courier New;
+    font-family: Silkscreen, serif;
 
+}
+
+@font-face {
+    font-family: Silkscreen; /* set name */
+    src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
 }
 #poem {
     background-color: aquamarine;
@@ -34,6 +39,9 @@ ul.topnav li a {
     padding: 14px 16px;
     text-decoration: underline;
     text-decoration-style: wavy ;
+}
+#shufflebutton {
+    background-color: darkblue;
 }
 .djswaxyrockdiv {
     display: flex;

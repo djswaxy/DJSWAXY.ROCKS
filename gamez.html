@@ -3,26 +3,45 @@
 <head>
     <link rel="stylesheet" href="gamestylez.css">
     <meta charset="UTF-8">
-    <title>Gamez!</title>
-</head>
-<body>
-<h3>Todo:</h3>
-<div id="maincontainer">
 
-    <div id="leftcontainer"><p style="font-family: Papyrus">- Add structure</p>
-        <p style="font-family: Papyrus">- Add user authentication</p>
-        <p style="font-family: Papyrus">- Add gamez</p></div>
+    <title>Gamez!</title>
+
+</head>
+<header>
+    <ul class="topnav">
+        <li><a href="coolrocks.html">*Images of Cool Rocks*</a></li>
+        <li><a href="index.html">*Home*</a></li>
+        <button id="shufflebutton"> *SHUFFLE WALLPAPER*</button>
+    </ul>
+</header>
+<body>
+
+<div id="maincontainer">
+    <div id="leftcontainer"><h3>Todo:</h3>
+        <p>- Add structure</p>
+        <p>- Add user authentication</p>
+        <p>- Add gamez</p></div>
     <div id="centercontainer">
+        <div id="centerheader"><p>Sign Up.exe</p> <img src="./localresources/icecream.png" width="32" height="32"></div>
         <div id="centertopcontainer">
-            <img src="localresources/accountpicture2.png" id="AccountPic1">
-            <img src="localresources/accountpicture3.png"id="AccountPic2">
-            <img src="localresources/accountpicture4.png"id="AccountPic3">
+
+            <div id="loginpicstop">
+                <label id="Pic1"><input type="radio" name="avatar" value="pic1" class="sr-only"> <img src="localresources/accountpicture1.png"></label>
+                <label id="Pic2"> <input type="radio" name="avatar" value="pic2" class="sr-only"><img src="localresources/accountpicture2.png"></label>
+                <label id="Pic3"> <input type="radio" name="avatar" value="pic3" class="sr-only"><img src="localresources/accountpicture3.png"></label>
+            </div>
+            <div id="loginpicsbottom">
+                <label id="Pic4"> <input type="radio" name="avatar" value="pic4" class="sr-only"><img src="localresources/accountpicture4.png"> </label>
+                <label id="Pic5"> <input type="radio" name="avatar" value="pic5" class="sr-only"><img src="localresources/accountpicture5.png"></label>
+                <label id="Pic6"> <input type="radio" name="avatar" value="pic6" class="sr-only"><img src="localresources/accountpicture6.png"> </label>
+                </div>
+
 
         </div>
         <div id="centerbottomcontainer">
         <div id="loginform"><p>Screenname: </p><input type="text" name="UsernameInput" id="UserNameInput"><br>
             <p>Password:</p><input type="password" name="PasswordInput" id="PassWordInput">
-        <button id="loginbutton" onclick="login()">-></button>
+        <button id="loginbutton" onclick="login()">ENTER -></button>
         </div>
         </div>
     </div>
