@@ -1,0 +1,76 @@
+body {
+background-image: url("localresources/windowsblank.jpg");
+}
+#maincontainer{
+    display: flex;
+    flex-direction: row;
+
+    gap: 25px;
+
+    margin: 0 auto ;
+    width: 100%;
+
+}
+#leftcontainer {
+    width: 33%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    list-style-type: none;
+
+}
+#rightcontainer {
+    width: 33%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: right;
+    list-style-type: none;
+}
+#centercontainer {
+    width: 33%;
+    flex-direction: column;
+    display: flex;
+
+    justify-self: center;
+    list-style-type: none;
+    background-color: rgba(97, 208, 220, 0.1);
+    border: solid 3px rgba(97, 208, 220, 0.3);
+}
+#centercontainer p {
+    text-align: center;
+    color: white;
+}
+#centertopcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#centertopcontainer img {
+
+    align-self: center;
+    border: solid 3px rgba(97, 208, 220, 0.3);
+    height: 64px;
+    width: 64px;
+}
+
+
+#loginform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#loginform input {
+
+    width: 50%;
+}
+#loginform button {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 100, 220, 0.3);
+
+}
