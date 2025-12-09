@@ -1,3 +1,82 @@
 body {
-    background-image: url("localresources/dammen.jpg");
+    background-image: url("localresources/satanic1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+}
+@font-face {
+    font-family: Silkscreen; /* set name */
+    src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
+}
+ul.topnav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 0 50px 0;
+    padding: 0;
+}
+ul.topnav li a {
+    display: block;
+    color: wheat;
+    background-color: darkblue;
+    padding: 14px 16px;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+}
+#shufflebutton {
+    background-color: darkblue;
+    font-family: Silkscreen, serif;
+    color: wheat;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+    border: none;
+}
+#eventheader {
+    background-color: darkblue;
+    color: wheat;
+}
+#eventcontainer {
+    border: 2px solid darkblue;
+    background-color: white;
+}
+.rsvpButton {
+    background-color: darkblue;
+    color: wheat;
+    font-family: Silkscreen, serif;
+    margin-left: 25px;
+}
+
+#maincontainer{
+    display: flex;
+    flex-direction: row;
+
+    gap: 25px;
+
+    margin: 0 auto ;
+    width: 100%;
+
+}
+#leftcontainer {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    list-style-type: none;
+
+
+}
+#rightcontainer {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: right;
+    list-style-type: none;
+}
+.event {
+    width: 80%;
+    border: 3px solid black;
+    margin-bottom: 25px;
 }

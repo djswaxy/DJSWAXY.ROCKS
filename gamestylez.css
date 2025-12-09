@@ -1,11 +1,12 @@
 body {
-background-image: url("localresources/pixelartwallpaper2.png");
+    background-image: url("localresources/pixelartwallpaper2.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Silkscreen", sans-serif;
     font-weight: 400;
 
 }
+
 @font-face {
     font-family: Silkscreen; /* set name */
     src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */

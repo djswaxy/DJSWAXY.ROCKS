@@ -1,5 +1,3 @@
-
-
 document.getElementById("shufflebutton").addEventListener("click", shuffleWallpaper);
 let wallpaperindex = 0;
 function shuffleWallpaper() {
