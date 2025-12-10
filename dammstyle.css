@@ -58,7 +58,7 @@ ul.topnav li a {
 
 }
 #leftcontainer {
-    width: 50%;
+    width: 33%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ ul.topnav li a {
 
 }
 #rightcontainer {
-    width: 50%;
+    width: 66%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -79,4 +79,11 @@ ul.topnav li a {
     width: 80%;
     border: 3px solid black;
     margin-bottom: 25px;
+}
+#forumheader {
+    background-color: darkblue;
+}
+#forumcontainer {
+    border: 2px solid darkblue;
+    background-color: rgba(255,255,255,0.5);
 }

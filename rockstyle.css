@@ -32,13 +32,27 @@ ul.topnav {
 
 
 }
-ul.topnav li a {
+ul.topnav a {
     display: block;
     color: wheat;
     background-color: darkblue;
     padding: 14px 16px;
     text-decoration: underline;
     text-decoration-style: wavy ;
+}
+
+ul.topnav a img {
+    display: block;
+    color: wheat;
+    background-color: darkblue;
+    padding: 14px 16px;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+}
+#LogoutButton Button{
+    background-color: red;
+    color: white;
+    font-family: Silkscreen, serif;
 }
 #shufflebutton {
     background-color: darkblue;

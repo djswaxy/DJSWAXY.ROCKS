@@ -1,0 +1,50 @@
+@font-face {
+    font-family: Silkscreen; /* set name */
+    src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
+}
+body p {
+    font-family: "Silkscreen", sans-serif;
+}
+#UserNameInput {
+    font-family: "Silkscreen", sans-serif;
+}
+#PasswordInput {
+    font-family: "Silkscreen", sans-serif;
+}
+#loginbutton {
+    margin-top: 10px;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    color: white;
+    justify-self: right;
+    background-color: blue;
+}
+
+#maincontainer{
+    display: flex;
+    flex-direction: row;
+
+    gap: 25px;
+
+    margin: 0 auto ;
+    width: 100%;
+
+}
+#leftcontainer {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    list-style-type: none;
+
+
+}
+#rightcontainer {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: right;
+    list-style-type: none;
+}

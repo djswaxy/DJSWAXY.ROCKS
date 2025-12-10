@@ -28,6 +28,7 @@ ul.topnav li a {
     text-decoration: underline;
     text-decoration-style: wavy ;
 }
+
 #shufflebutton {
     background-color: darkblue;
     font-family: Silkscreen, serif;
@@ -174,6 +175,7 @@ ul.topnav li a {
     font-weight: 400;
     color: white;
     justify-self: right;
+    background-color: darkblue;
 
 }
 .sr-only {
