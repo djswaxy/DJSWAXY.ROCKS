@@ -1,6 +1,8 @@
 
 body {
     background-image: url("localresources/frutigeraero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     font-family: Silkscreen, serif;
 
@@ -49,11 +51,24 @@ ul.topnav a img {
     text-decoration: underline;
     text-decoration-style: wavy ;
 }
-#LogoutButton Button{
-    background-color: red;
-    color: white;
+
+#GuestUserTextAndBtn {
+    display: flex;
+    flex-direction: row;
     font-family: Silkscreen, serif;
+    background-color: darkblue;
+    justify-content: center;
+    align-items: center;
 }
+
+#GuestUserBtn {
+    background-color: greenyellow;
+    color: black;
+    font-family: Silkscreen, serif;
+    border: 2px solid black;
+    margin-right: 5px;
+}
+
 #shufflebutton {
     background-color: darkblue;
 }

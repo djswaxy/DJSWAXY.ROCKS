@@ -2,8 +2,29 @@
     font-family: Silkscreen; /* set name */
     src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
 }
+body {
+    background-image : url(./localresources/lakesidewallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 body p {
     font-family: "Silkscreen", sans-serif;
+}
+ul.topnav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 0 50px 0;
+    padding: 0;
+}
+ul.topnav li a {
+    display: block;
+    color: wheat;
+    background-color: darkblue;
+    padding: 14px 16px;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+    font-family: Silkscreen, sans-serif;
 }
 #UserNameInput {
     font-family: "Silkscreen", sans-serif;
@@ -44,7 +65,11 @@ body p {
     width: 50%;
     min-height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-self: right;
     list-style-type: none;
+}
+#GIFS {
+    height: 100px;
+    width: 100px;
 }

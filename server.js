@@ -28,11 +28,19 @@ app.post('/register', async (req, res) => {
 
     try {
         // Create a new user in memory
-        const newUser = new User({
-            username: username,
-            password: password,
-            avatar: avatar
-        });
+        const user = await User.findOne({ username: username });
+        if (!user) {
+            const newUser = new User({
+                username: username,
+                password: password,
+                avatar: avatar
+            });
+        }
+        if (user) {
+            alert(`User already exists!`);
+            return;
+        }
+
 
         // Save to database
         await newUser.save();

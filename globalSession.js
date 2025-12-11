@@ -5,6 +5,8 @@ avatarArray = ["./localresources/accountpicture1", "./localresources/accountpict
 
 if(loggedInUser) {
     console.log("Logged in: " + loggedInUser);
+
+
     let picIndex = 0;
     if (loggedInAvatar) {
         // Removes "pic" and subtracts 1 to get the array index
@@ -12,11 +14,21 @@ if(loggedInUser) {
     }
     let loggedInProfilePic = avatarArray[picIndex];
 
-    document.getElementById("UserStatus").innerHTML = `du er <span style="color:red">${loggedInUser}</span>`;
-    document.getElementById("IndexPic").innerHTML = `<img src="${loggedInProfilePic}.png" width="64" height="64">`;
-    document.getElementById("LogoutButton").innerHTML = "<button onclick='logout()'>LOG OUT</button>"
+    document.getElementById("GuestUserTextAndBtn").innerHTML = `
+            <a href="#">Hei ${loggedInUser}!</a> 
+            <button id="GuestUserBtn" style="background-color: red; color:white;" onclick="logout()">LOG OUT</button>
+            <img src="${loggedInProfilePic}.png" width="32" height="32">
+        `;
 
+
+
+
+    document.getElementById("chatinput").placeholder = "Type a message now!";
 }
+/*if (!loggedInUser) {
+    document.getElementById("LogOutOrInButton").innerHTML = `<button style='background-color: greenyellow' onclick="location.href='login.html'">LOG IN</button>`;
+
+}*/
 function logout() {
 
     localStorage.removeItem("currentUser");

@@ -149,21 +149,28 @@ function Tarot() {
             }
         function pressedfirstquestion() {
             const chatinput = document.getElementById("chatinput");
-            if (nameset === 0) {
-                if (bannedslurs.includes(chatinput.value)) {
-                    username = "iamstupid";
-                }
-                else {
-                    username = chatinput.value;
-                }
-
-                chatinput.value = "";
-                nameset++;
-                document.getElementById("chatinput").placeholder = "type a message now!";
-
-            } else {
+            if (loggedInUser) {
+                username = loggedInUser;
                 addchat(username);
             }
+            else {
+                if (nameset === 0) {
+                    if (bannedslurs.includes(chatinput.value)) {
+                        username = "iamstupid";
+                    }
+                    else {
+                        username = chatinput.value;
+                    }
+
+                    chatinput.value = "";
+                    nameset++;
+                    document.getElementById("chatinput").placeholder = "type a message now!";
+
+                } else {
+                    addchat(username);
+                }
+            }
+
 
             function addchat(username) {
                 const chatinput = document.getElementById("chatinput");
@@ -231,7 +238,7 @@ function Tarot() {
                 chatinput.value = "";
             }
         }
-        setInterval(getdata,1000);
+        //setInterval(getdata,1000);
 // Sjekk etter nye meldinger hvert 2. sekund (2000ms)
 /*setInterval(() => {
     fetch("./chatlog.json")

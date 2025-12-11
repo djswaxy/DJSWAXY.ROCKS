@@ -2,6 +2,13 @@
 
 document.getElementById("shufflebutton").addEventListener("click", shuffleWallpaper);
 let wallpaperindex = 0;
+if (localStorage.getItem("currentUser")) {
+    // Optional: Alert them so they know why they were redirected
+    alert("You are already logged in! Redirecting to home...");
+
+    // 2. Redirect to index.html (or coolrocks.html)
+    window.location.href = "index.html";
+}
 function shuffleWallpaper() {
     wallpaperindex++;
     const wallpapersarray = ["url(localresources/pixelartwallpaper1.png)","url(localresources/pixelartwallpaper2.png)","url(localresources/pixelartwallpaper3.jpg)","url(localresources/pixelartwallpaper4.jpg)"]
@@ -41,6 +48,6 @@ async function register() {
         localStorage.setItem("currentUser", username);
         localStorage.setItem("currentAvatar", selectedAvatar.value);
     } else {
-        alert("Something went wrong :(");
+        alert("Username Taken :( or something went wrong)");
     }
 }

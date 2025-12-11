@@ -73,7 +73,7 @@ ul.topnav li a {
     justify-self: right;
     list-style-type: none;
 }
-#centercontainer {
+#centercontainerGamez {
     width: 33%;
     flex-direction: column;
     display: flex;
@@ -83,7 +83,7 @@ ul.topnav li a {
     background-color: white;
     border: solid 3px darkblue;
 }
-#centercontainer p {
+#centercontainerGamez p {
     text-align: center;
     color: black;
     text-shadow: 1px 1px 1px blueviolet;
