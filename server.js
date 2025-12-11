@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt")
 const fs = require('fs');
 const app = express();
 const port = 3000;
@@ -15,34 +16,28 @@ mongoose.connect('mongodb+srv://emilostberg23_db_user:Vovov123%21%23%23%21@djswa
 // 2. Create the User Blueprint (Schema)
 const UserSchema = new mongoose.Schema({
     username: String,
-    password: String, // Note: In real apps, never save passwords as plain text!
+    password: String,
     avatar: String
 });
 
-// 3. Create the Model
+// lag user mal
 const User = mongoose.model('User', UserSchema);
 
-// 4. The Registration Route
+// Registering av ny bruker
 app.post('/register', async (req, res) => {
     const { username, password, avatar } = req.body;
 
     try {
-        // Create a new user in memory
-        const user = await User.findOne({ username: username });
-        if (!user) {
-            const newUser = new User({
-                username: username,
-                password: password,
-                avatar: avatar
-            });
-        }
-        if (user) {
-            alert(`User already exists!`);
-            return;
-        }
+        // 10 er god styrke
+        const hashedPassword = await bcrypt.hash(password, 10);
 
 
-        // Save to database
+        const newUser = new User({
+            username: username,
+            password: hashedPassword,
+            avatar: avatar
+        });
+
         await newUser.save();
 
         console.log("New user saved:", username);
@@ -52,15 +47,26 @@ app.post('/register', async (req, res) => {
         res.status(500).json({ status: "error", message: "Could not save user" });
     }
 });
+
+
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        // Find user by username AND password
-        const user = await User.findOne({ username: username, password: password });
+        // 1. Finn brukeren KUN ved hjelp av brukernavn
+        const user = await User.findOne({ username: username });
 
-        if (user) {
-            // Found them! Send back their details (including avatar)
+        if (!user) {
+            // Fant ingen bruker med det navnet
+            return res.json({ status: "error", message: "Wrong username or password" });
+        }
+
+        // 2. Sjekk om passordet stemmer med hashen i databasen
+        // bcrypt.compare(passordet_brukeren_skrev, passordet_i_databasen)
+        const passwordMatch = await bcrypt.compare(password, user.password);
+
+        if (passwordMatch) {
+            // Passordet er riktig!
             res.json({
                 status: "ok",
                 message: "Login successful",
@@ -68,9 +74,10 @@ app.post('/login', async (req, res) => {
                 avatar: user.avatar
             });
         } else {
-            // No match found
+            // Feil passord
             res.json({ status: "error", message: "Wrong username or password" });
         }
+
     } catch (error) {
         console.error(error);
         res.status(500).json({ status: "error", message: "Server error" });
