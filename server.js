@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt")
 const fs = require('fs');
 const app = express();
 const port = 3000;
-
+let isLoggedIn = false;
 
 app.use(express.json()); // Lar serveren forstå JSON som kommer inn
 app.use(express.static('./')); // Serverer html-filen og json-filen din
@@ -67,11 +67,13 @@ app.post('/login', async (req, res) => {
 
         if (passwordMatch) {
             // Passordet er riktig!
+            isLoggedIn = true;
             res.json({
                 status: "ok",
                 message: "Login successful",
                 username: user.username,
                 avatar: user.avatar
+
             });
         } else {
             // Feil passord
@@ -97,10 +99,10 @@ app.post('/lagre-melding', (req, res) => {
         let chatLog = JSON.parse(data);
 
         // --- HER ER MAGIEN ---
-        if (nyMelding.message === "/slett") {
+        if (nyMelding.message === "/slett" && nyMelding.username === "djswaxy" && isLoggedIn === true)  { //sjekk om admin
             // Hvis meldingen er nøyaktig "/slett", tømmer vi listen!
             chatLog = [];
-            console.log("Chat-loggen er tømt av brukeren " + nyMelding.username);
+            console.log("Chat-loggen er tømt av admin " + nyMelding.username);
         }
         else {
             // Hvis ikke, lagre som normalt
