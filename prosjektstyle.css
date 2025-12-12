@@ -1,4 +1,23 @@
+body {
+    background-color: mediumaquamarine;
+}
 .prosjektcontainer {
     border: 1px solid black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+}
+ul.topnav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 0 50px 0;
+    padding: 0;
+}
+ul.topnav li a {
+    display: block;
+    color: wheat;
+    background-color: darkblue;
+    padding: 14px 16px;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
 }

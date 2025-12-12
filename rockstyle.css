@@ -95,11 +95,11 @@ ul.topnav a img {
 
 #djswaxyrockstext {
     justify-self: center;
-    background-image: linear-gradient(-45deg, deeppink, blueviolet);
+
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
     width: 330px;
     height: 80px;
     text-shadow: 1px 1px black;
-
 
 }
 .CenterBottomDiv {
@@ -244,15 +244,57 @@ ul.topnav a img {
     justify-self: left;
 
 }
-
-.linksbutton {
-    background-color: deeppink;
-    width: 200px; height: 50px;
-    margin: 10px 0;
+.centerdiv {
+    display: flex;
+    flex-direction: column;
 }
+.CenterBottomDiv {
+    display: flex;
+    flex-direction: column;
+}
+.CenterTopDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+#githubButton {
+    background-image: url("./localresources/githubpixelart.png") ;
+    background-color: blueviolet;
+    width: 100px; height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+#instaButton {
+    background-image: url("./localresources/instagrampixelart.png") ;
+    background-color: blueviolet;
+    width: 100px; height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+#meowButton {
+    background-image: url("./localresources/catpixelart.png") ;
+    background-color: blueviolet;
+    width: 100px; height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+
 #secretbutton {
-    width: 50px; height: 20px;
+    width: 50px; height: 30px;
     background-color: deeppink;
+    font-family: Silkscreen, serif;
+}
+#secretinput{
+    border: 5px solid darkblue;
+    color: deeppink;
+    font-family: Silkscreen, serif;
 }
 #chatplaceholder {
     margin-top: 10px;
