@@ -23,10 +23,11 @@ function shuffleWallpaper() {
 async function register() {
     const username = document.getElementById("UserNameInput").value;
     const password = document.getElementById("PassWordInput").value;
+    const favcolor = document.getElementById("ColorInput").value;
     const selectedAvatar = document.querySelector('input[name="avatar"]:checked');
 
-    if (!username || !password || !selectedAvatar) {
-        alert("Behøver billede, brugernavn og passord!")
+    if (!username || !password || !selectedAvatar || !favcolor) {
+        alert("Behøver billede, brugernavn og passord! + favourittfarge")
         return;
     }
     const response = await fetch('/register', {
@@ -35,7 +36,8 @@ async function register() {
         body: JSON.stringify({
             username: username,
             password: password,
-            avatar: selectedAvatar.value // This will be "pic1", "pic2", etc.
+            avatar: selectedAvatar.value, // This will be "pic1", "pic2", etc.
+            color: favcolor
         })
     });
     const result = await response.json();
@@ -47,6 +49,7 @@ async function register() {
         document.getElementById("PassWordInput").value = "";
         localStorage.setItem("currentUser", username);
         localStorage.setItem("currentAvatar", selectedAvatar.value);
+        localStorage.setItem("FavColor",favcolor)
     } else {
         alert("Username Taken :( or something went wrong)");
     }

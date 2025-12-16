@@ -121,6 +121,22 @@ app.post('/lagre-melding', (req, res) => {
         });
     });
 });
+app.post('/SLETTMELDINGER', (req, res) => {
+    // 1. Lag en tom liste
+    const tomListe = [];
+
+    // 2. Skriv den tomme listen over den gamle chatlog.json-filen
+    fs.writeFile('./chatlog.json', JSON.stringify(tomListe), (err) => {
+        if (err) {
+            console.error("Kunne ikke slette chatlog:", err);
+            res.status(500).send("Feil ved sletting");
+            return;
+        }
+        // 3. Send tommel opp tilbake til nettleseren
+        console.log("Chatloggen ble slettet av en admin.");
+        res.sendStatus(200); // 200 betyr OK
+    });
+});
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })

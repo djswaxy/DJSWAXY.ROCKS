@@ -1,5 +1,6 @@
 const loggedInUser = localStorage.getItem("currentUser");
 const loggedInAvatar = localStorage.getItem("currentAvatar");
+const FavColor = localStorage.getItem("FavColor")
 
 avatarArray = ["./localresources/accountpicture1", "./localresources/accountpicture2", "./localresources/accountpicture3", "./localresources/accountpicture4", "./localresources/accountpicture5", "./localresources/accountpicture6"];
 

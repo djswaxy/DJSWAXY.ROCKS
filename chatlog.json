@@ -1,42 +1,37 @@
 [
   {
     "username": "boom",
+    "usernamecolor": "",
     "message": "ada"
   },
   {
-    "username": "djswaxy",
-    "message": "goop"
+    "username": "Emil",
+    "message": "Hei",
+    "color": "#ff4020"
+  },
+  {
+    "username": "boga",
+    "message": "yo",
+    "color": "blue"
+  },
+  {
+    "username": "boga",
+    "message": "yo",
+    "color": "blue"
   },
   {
     "username": "djswaxy",
-    "message": "yo"
+    "message": "ad",
+    "color": "undefined"
   },
   {
     "username": "djswaxy",
-    "message": "bert"
+    "message": "hey",
+    "color": "undefined"
   },
   {
-    "username": "goop",
-    "message": "hi again"
-  },
-  {
-    "username": "djswaxy",
-    "message": "/slett"
-  },
-  {
-    "username": "djswaxy",
-    "message": "yo"
-  },
-  {
-    "username": "djswaxy",
-    "message": "jeg er "
-  },
-  {
-    "username": "djswaxy",
-    "message": "dj"
-  },
-  {
-    "username": "goop",
-    "message": "/slett"
+    "username": "bonk",
+    "message": "halo",
+    "color": "undefined"
   }
 ]

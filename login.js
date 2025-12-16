@@ -19,6 +19,7 @@ async function logIn() {
             // Save to LocalStorage so other pages know we are logged in
             localStorage.setItem("currentUser", result.username);
             localStorage.setItem("currentAvatar", result.avatar);
+            localStorage.setItem("FavColor", result.color);
 
             alert("Du er logget ind, " + result.username + "!");
             window.location.href = "index.html"; // Redirect to home

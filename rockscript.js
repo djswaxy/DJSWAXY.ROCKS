@@ -2,6 +2,7 @@
 const Duckbutton = document.getElementById("secretbutton");
 const secretinput = document.getElementById("secretinput");
 const chatbutton = document.getElementById("chatbutton");
+
 let saveddata = [];
 function getdata() {
     fetch("./chatlog.json?v=" + Date.now())
@@ -36,7 +37,8 @@ fetch("./chatlog.json")
 
         function logpusher(data) {
             const newP = document.createElement("p");
-            newP.innerHTML = `<span style='color: blue; font-weight: bold;'>${data.username}</span>: ${data.message}`;
+            const brukerFarge = data.color || "#00008BFF";
+            newP.innerHTML = `<span style='color: ${brukerFarge}; font-weight: bold;'>${data.username}</span>: ${data.message}`;
             document.getElementById("chatlog").appendChild(newP);
             const chatLog = document.getElementById("chatlog");
             chatLog.scrollTop = chatLog.scrollHeight;
@@ -68,30 +70,31 @@ fetch("./chatlog.json")
 // 21 + 14 + 14 + 14 Cards = 63 kort.
 function hentDagensDikt() {
 
-    fetch("./KinesiskeDikt.json")
+    fetch("./poems.json")
         .then(response => response.json())
         .then(alleDikt => {
             // 1. Velg dikt basert på dato (samme logikk som sist)
             const iDag = new Date();
             const dagNummer = Math.floor(iDag.getTime() / (1000 * 60 * 60 * 24));
-            const diktIndeks = dagNummer % alleDikt.length;
+            const diktIndeks = dagNummer % alleDikt.poems.length;
 
-            const dagensDikt = alleDikt[diktIndeks];
+            const dagensDikt = alleDikt.poems[diktIndeks];
 
 
-            document.getElementById("diktTittel").innerHTML = dagensDikt.title || "Uten tittel";
-            document.getElementById("diktForfatter").innerHTML = "Av: " + dagensDikt.author;
-            document.getElementById("diktDynasti").innerHTML = "(" + dagensDikt.dynasty + "-dynastiet)";
+            document.getElementById("diktTittel").innerHTML = "Tittel: " + dagensDikt.title || "Uten tittel";
+            document.getElementById("diktForfatter").innerHTML = dagensDikt.author;
+            //ocument.getElementById("diktDynasti").innerHTML = "(" + dagensDikt.dynasty + "-dynastiet)";
 
             //fikser linjene
-            let formatertTekst = dagensDikt.content.split("|").join("<br>");
+            let formatertTekst = dagensDikt.text.split("|").join("<br>");
 
-            document.getElementById("diktTekst").innerHTML = formatertTekst;
+            document.getElementById("diktTekst").innerHTML = dagensDikt.text;
         })
         .catch(error => console.error("Kunne ikke laste dikt:", error));
 }
 
 hentDagensDikt();
+
 function Tarot() {
     const TarotRow = document.getElementById("TarotRow");
     const TarotDataRow = document.getElementById("TarotDataRow");
@@ -203,13 +206,32 @@ function Tarot() {
                     chatLog.style.border = ""; // Kul grønn kantlinje
                     chatinput.value = "";
                     return;
+
+
+                }
+
+                else if (chatmessage === "/slett" && loggedInUser === "djswaxy") {
+                    fetch("/SLETTMELDINGER", {
+                        method: POST
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                document.getElementById("chatlog").innerHTML = "";
+                                saveddata = []; // Nullstill lokal hukommelse
+                                alert("🧹 POOF! Chatloggen er slettet for alle.");
+                            }
+                        })
+                    chatinput.value = "";
+                    return;
                 }
                 else {
 
                 }
+                const FavColor = localStorage.getItem("FavColor") || "blue"; // ikke logget ind -> bruk blå!
                 const newEntry = {
                     username: username,
                     message: chatmessage,
+                    color: FavColor
                 };
                 //logpusher(newEntry);
                 saveddata.push(newEntry);
@@ -224,45 +246,35 @@ function Tarot() {
 
                 })
 
-            .then(response => response.json())
-                .then(data => {
-                    if (data.action === "cleared") {
-                        document.getElementById("chatlog").innerHTML = "";
-                        alert("🧹 Chatten er tømt!");
-                    }
-                    else {
-                        logpusher(newEntry);
-                    }
 
-                })
-                chatinput.value = "";
+
+
             }
         }
         //setInterval(getdata,1000);
-// Sjekk etter nye meldinger hvert 2. sekund (2000ms)
-/*setInterval(() => {
-    fetch("./chatlog.json")
+setInterval(() => {
+    fetch("./chatlog.json?v=" + Date.now()) // ?v=... hindrer at nettleseren husker gammel data
         .then(response => response.json())
         .then(data => {
-            // Hvis serveren har FLERE meldinger enn oss -> Legg til de nye
-            if (data.length > saveddata.length) {
-                // Hent bare de nye meldingene (slice)
+
+            // SJEKK: Har serveren færre meldinger enn oss? Da er det slettet!
+            if (data.length < saveddata.length) {
+                document.getElementById("chatlog").innerHTML = ""; // Tøm skjermen
+                saveddata = []; // Tøm minnet
+                // Hvis du vil laste inn eventuelle nye meldinger som kom etter sletting:
+                data.forEach(entry => logpusher(entry));
+            }
+
+            // SJEKK: Har serveren flere meldinger enn oss? Legg til de nye.
+            else if (data.length > saveddata.length) {
                 const newMessages = data.slice(saveddata.length);
-
                 newMessages.forEach(entry => logpusher(entry));
-                saveddata = data; // Oppdater hukommelsen vår
             }
-            // Hvis serveren har FÆRRE meldinger (noen skrev /slett) -> Tøm alt
-            else if (data.length < saveddata.length) {
-                document.getElementById("chatlog").innerHTML = "";
-                saveddata = data;
-            }
+
+            // Oppdater saveddata til slutt
+            saveddata = data;
         });
-}, 2000); */
-
-
-
-
+}, 2000); // Sjekker hvert 2. sekund
 
 
 
