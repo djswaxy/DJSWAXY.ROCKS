@@ -212,7 +212,7 @@ function Tarot() {
 
                 else if (chatmessage === "/slett" && loggedInUser === "djswaxy") {
                     fetch("/SLETTMELDINGER", {
-                        method: POST
+                        method: "POST"
                     })
                         .then(response => {
                             if (response.ok) {
