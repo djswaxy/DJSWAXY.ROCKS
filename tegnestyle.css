@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(to right, #aa076b, #61045f);
+}
+
+@font-face {
+    font-family: Silkscreen; /* set name */
+    src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
+}
+ul.topnav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+ul.topnav a {
+    display: block;
+    color: wheat;
+    background-color: darkblue;
+    padding: 14px 16px;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+}
+.tidligereTegninger {
+    width: 150px;
+    height: 150px;
+    border: 8px solid darkblue;
+    background-color: white;
+    margin: 10px 0 10px 0;
+}
+#tegneCanvas {
+    border: 8px solid darkblue;
+    width: 750px;
+    height: 500px;
+    background-color: white;
+}
+#tegneMainContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+#tegneHøyreContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%
+}
+#tegneVenstreContainer {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+#tegneVenstreContainer p {
+    font-family: Silkscreen, sans-serif;
+    color: wheat;
+}
+#tegneHøyreBunn p {
+    font-family: Silkscreen, sans-serif;
+    color: wheat;
+}
+#tegneHøyreBunn {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+}
+#fillButton {
+    background-image: url("./localresources/color.png");
+
+}
+#lagreKnapp {
+    background-image: url("./localresources/heart.png");
+    background-color: pink;
+
+}
+#tegneColorPicker {
+    width: 120px;
+    height: 64px;
+    border: solid 4px darkblue;
+}
+#resetCanvas {
+    background-image: url("./localresources/close.png");
+    background-color: red;
+}
+.tegnetools {
+    width: 64px;
+    height: 64px;
+    border: solid 4px darkblue;
+    margin: 0 5px 0 5px;
+    background-size: contain;
+}

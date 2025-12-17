@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="tegnestyle.css">
+    <meta charset="UTF-8">
+    <title>tegn her :P</title>
+</head>
+<header>
+    <ul class="topnav">
+        <li><a href="index.html">*Hjem*</a></li>
+    </ul>
+</header>
+<body>
+<div id="tegneMainContainer">
+    <div id="tegneVenstreContainer">
+        <p> Tidligere Tegninger:</p>
+        <img class="tidligereTegninger" id="tidligereTegning1">
+        <p id="forfatterTT1">av: </p>
+        <img class="tidligereTegninger" id="tidligereTegning2">
+        <p id="forfatterTT2">av: </p>
+        <img class="tidligereTegninger" id="tidligereTegning3">
+        <p id="forfatterTT3">av: </p>
+
+    </div>
+    <div id="tegneHøyreContainer">
+        <div id="tegneHøyreTop">
+            <canvas id="tegneCanvas"></canvas>
+        </div>
+        <div id="tegneHøyreBunn">
+
+            <button class="tegnetools" id="resetCanvas" onclick="clearCanvas()"></button>
+            <input  type="color" name="colorPicker" id="tegneColorPicker">
+            <button class="tegnetools" id="fillButton" onclick="fillCanvas()"></button>
+            <button class="tegnetools" id="lagreKnapp"></button>
+
+
+        </div>
+        <h3>TODO:</h3>
+        <p>- Legg til nylige tegninger <br> - Legg til user save tegninger <br> -Legg til flere tegne tools
+            <br> -Legg til lagre tegning som profilbilde maybe :P? <br> -Legg til pixel art modus?</p>
+    </div>
+
+
+
+</div>
+
+
+
+
+<script src="tegneskript.js"></script>
+</body>
+</html>
