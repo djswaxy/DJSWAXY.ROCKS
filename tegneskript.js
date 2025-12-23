@@ -24,8 +24,8 @@ function setPosition(e) {
 
 // resize canvas
 function resize() {
-    ctx.canvas.width = 750;
-    ctx.canvas.height = 500;
+    ctx.canvas.width = 560;
+    ctx.canvas.height = 460;
 }
 fargeinput = document.getElementById("tegneColorPicker");
 function draw(e) {

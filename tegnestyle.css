@@ -1,7 +1,21 @@
-body {
-    background: linear-gradient(to right, #aa076b, #61045f);
+html {
+    cursor:url("./localresources/cursorpen.png"), auto;
 }
-
+body {
+    background-image: url("./localresources/twinpeakscurtain.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#pictureframe {
+    background-image: url("./localresources/pictureframe.jpg");
+    background-size: contain;
+    width: 700px;
+    height: 590px;
+}
+#tegneHøyreTop {
+    padding-top: 50px;
+    padding-left: 60px;
+}
 @font-face {
     font-family: Silkscreen; /* set name */
     src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
@@ -29,9 +43,9 @@ ul.topnav a {
     margin: 10px 0 10px 0;
 }
 #tegneCanvas {
-    border: 8px solid darkblue;
-    width: 750px;
-    height: 500px;
+
+    width: 560px;
+    height: 460px;
     background-color: white;
 }
 #tegneMainContainer {

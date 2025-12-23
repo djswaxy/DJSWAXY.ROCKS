@@ -1,23 +1,70 @@
 body {
     background-color: mediumaquamarine;
 }
+@font-face {
+    font-family: Silkscreen; /* set name */
+    src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
+}
+@font-face {
+    font-family: Daydream;
+    src: url(localresources/Daydream.otf);
+}
+@font-face {
+    font-family: Gothik;
+    src: url(localresources/Gothik.ttf);
+}
+@font-face {
+    font-family: Punk;
+    src: url(localresources/punk.ttf);
+}
 .prosjektcontainer {
     border: 1px solid black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
+
 }
-ul.topnav {
+.prosjektcontainer h3 {
+    font-family: Daydream, serif;
+    color: #61045f;
+    justify-self: center;
+}
+#homebutton {
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Daydream, serif;
+    color: #aa076b;
+    font-size: 20px;
+    border: none;
+
+}
+
+#rightTopDiv {
+    position: relative;
+}
+#rightTopDiv:has(#homebutton:hover) #mascot {
+    background-image: url("./localresources/mascothoverhome.png");
+}
+#mascot {
+    width: 400px;
+    height: 800px;
+    background-image: url("./localresources/mascot.png");
+    background-size: cover;
+
+}
+
+#mainDiv {
     display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0 0 50px 0;
-    padding: 0;
+    flex-direction: row;
+    width: 100%;
+
 }
-ul.topnav li a {
-    display: block;
-    color: wheat;
-    background-color: darkblue;
-    padding: 14px 16px;
-    text-decoration: underline;
-    text-decoration-style: wavy ;
+#rightdiv {
+    width: 50%;
+}
+#leftDiv {
+    width: 50%;
 }

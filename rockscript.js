@@ -2,8 +2,34 @@
 const Duckbutton = document.getElementById("secretbutton");
 const secretinput = document.getElementById("secretinput");
 const chatbutton = document.getElementById("chatbutton");
-
 let saveddata = [];
+
+
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+
+const Sound1 = document.getElementById("Silverflame");
+const Sound2 = document.getElementById("SpaceOddity");
+const Sound3 = document.getElementById("SuspendedInGaffa");
+
+
+
+function Toggle1() {
+    return Sound1.paused ? Sound1.play() : Sound1.pause();
+}
+function Toggle2() {
+    return Sound2.paused ? Sound2.play() : Sound2.pause();
+}
+function Toggle3() {
+    return Sound3.paused ? Sound3.play() : Sound3.pause();
+}
+
 function getdata() {
     fetch("./chatlog.json?v=" + Date.now())
         .then(response => response.json()) // Parse JSON

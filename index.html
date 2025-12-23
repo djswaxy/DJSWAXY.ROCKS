@@ -7,7 +7,7 @@
 </head>
 <header>
     <ul class="topnav">
-        <li><a href="coolrocks.html">*Images of Cool Rocks*</a></li>
+        <li><a href="coolrocks.html">*Exq. Minerals*</a></li>
         <li><a href="gamez.html">*Gamez*</a></li>
         <li><a style="color:yellow" href="tegne.html">*tegnebrett*</a></li>
         <li><a href="prosjekter.html">*ProSjekTer*</a></li>
@@ -62,11 +62,16 @@
               <p id="diktForfatter"></p>
               <p id="diktTekst"></p>
           </div>
+
           <div id="radioDiv">
-              <audio controls>
-                  <source src="localresources/silverflame.mp3" type="audio/mpeg">
-                  <source src="localresources/space oddity.mp3" type="audio/mpeg">
-              </audio>
+              <p id="TrykkKasettTxt">Trykk En Kasett!!</p>
+              <button id="Casette1" onclick="Toggle1()"></button>
+              <button id="Casette2" onclick="Toggle2()"></button>
+              <button id="Casette3" onclick="Toggle3()"></button>
+              <audio id="Silverflame" src="./localresources/silverflame.mp3"></audio>
+              <audio id="SpaceOddity" src="./localresources/spaceoddity.mp3"></audio>
+              <audio id="SuspendedInGaffa" src="./localresources/SuspendedInGaffa.mp3"></audio>
+
           </div>
 
 
@@ -89,11 +94,11 @@
         <button id="secretbutton" type = "submit" name = "secret" id = "secret">???</button>
     </div>
     <div class="CenterBottomDiv">
-        <h3>Hva er i stjernene for deg...?</h3>
-        <button id="tarotbutton" onclick="Tarot()">Tarot Reading</button>
+
+        <button id="tarotbutton" onclick="Tarot()">Les din fremtid</button>
         <a id="tarotmeaninglink" href="https://www.pulltarot.com/tarot-card-meanings">Hva dine resultater betyr</a>
     <div id="TarotRow">
-<img id="bromance" src="localresources/daleharry.png">
+<div id="bromance"></div>
     </div>
         <div id="TarotDataRow">
 

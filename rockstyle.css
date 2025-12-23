@@ -1,4 +1,6 @@
-
+html {
+    cursor:url("./localresources/regularcursor.png"), auto;
+}
 body {
     background-image: url("localresources/frutigeraero.jpg");
     background-repeat: no-repeat;
@@ -135,8 +137,11 @@ ul.topnav a img {
 }
 #tarotbutton {
     height: 40px;
-    width: 80px;
-    background-color: aquamarine;
+    width: 300px;
+    background-color: black;
+    text-shadow: 1px 1px aquamarine;
+    font-family: Daydream, serif;
+    color: white;
     text-decoration: underline;
     text-decoration-style: dashed ;
     margin-bottom: 10px;
@@ -167,15 +172,52 @@ ul.topnav a img {
 
 }
 #bromance {
-
-    width: 90%;
+    background-image: url("./localresources/daleharry.png");
+    width: 400px;
+    height: 150px;
+    background-size: cover;
 }
+#bromance:hover {
+    background-image: url("./localresources/daleharrylove.png");
+    background-size: cover;
+}
+
 #radioDiv {
+    display: flex;
+    flex-direction: column;
     background-image: url("./localresources/kasetter.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
+    align-items: center;
 }
+#TrykkKasettTxt {
+    font-family: Daydream, serif;
+    margin-right: auto;
+    margin-left: 30px;
+    text-shadow: 2px 2px black;
+    color: aquamarine;
+}
+#Casette1 {
+    margin-top: 0px;
+    height: 300px;
+    width: 90%;
+    background-color: rgba(0,128,0,0.1);
+}
+#Casette2 {
+
+    height: 300px;
+    width: 90%;
+    background-color: rgba(0,128,0,0.1);
+}
+#Casette3 {
+
+    height: 500px;
+    width: 90%;
+    background-color: rgba(0,128,0,0.1);
+}
+
+
 #radioDiv audio {
     margin-top: 170px;
 }
@@ -254,7 +296,7 @@ ul.topnav a img {
 .centerdiv{
 
     border: solid 10px darkblue;
-    background-color: blueviolet;
+    background-color: black;
     width: 33%;
     box-shadow: 10px 10px black;
 }
@@ -339,6 +381,7 @@ ul.topnav a img {
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    background-color: black;
 
 }
 .theDoors {
@@ -346,7 +389,7 @@ ul.topnav a img {
 }
 #githubButton {
     background-image: url("./localresources/githubpixelart.png") ;
-    background-color: blueviolet;
+    background-color: black;
     width: 100px; height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -354,7 +397,7 @@ ul.topnav a img {
 }
 #instaButton {
     background-image: url("./localresources/instagrampixelart.png") ;
-    background-color: blueviolet;
+    background-color: black;
     width: 100px; height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -362,13 +405,15 @@ ul.topnav a img {
 }
 #meowButton {
     background-image: url("./localresources/catpixelart.png") ;
-    background-color: blueviolet;
+    background-color: black;
     width: 100px; height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
 }
-
+.secret {
+    background-color: black;
+}
 
 #secretbutton {
     width: 50px; height: 30px;
