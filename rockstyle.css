@@ -12,6 +12,18 @@ body {
     font-family: Silkscreen; /* set name */
     src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
 }
+@font-face {
+    font-family: Daydream;
+    src: url(localresources/Daydream.otf);
+}
+@font-face {
+    font-family: Gothik;
+    src: url(localresources/Gothik.ttf);
+}
+@font-face {
+    font-family: Punk;
+    src: url(localresources/punk.ttf);
+}
 #poem {
     background-color: aquamarine;
     text-align: center;
@@ -33,6 +45,7 @@ ul.topnav {
     padding: 0;
 
 
+
 }
 ul.topnav a {
     display: block;
@@ -41,6 +54,7 @@ ul.topnav a {
     padding: 14px 16px;
     text-decoration: underline;
     text-decoration-style: wavy ;
+    font-family: Daydream, serif;
 }
 
 ul.topnav a img {
@@ -51,6 +65,7 @@ ul.topnav a img {
     text-decoration: underline;
     text-decoration-style: wavy ;
 }
+
 
 #GuestUserTextAndBtn {
     display: flex;
@@ -76,28 +91,39 @@ ul.topnav a img {
     display: flex;
     flex-direction: column;
     justify-self: center;
-    width: 400px;
+    width: 33%;
     margin-bottom: 20px;
+    background-color: darkblue;
+    box-shadow: 10px 10px black;
 }
 #djswaxyrockheader {
-
-    justify-self: left;
+    display: flex;
+    flex-direction: row;
     color: wheat;
     background-color: darkblue;
-    width: 350px;
-    padding: 0;
+    height: 25px;
+
+
+}
+#counterbtn {
+    background-color: mediumvioletred;
+    font-family: daydream, serif;
+    margin: 5px 5px 0 auto;
+    height: 25px;
+    box-shadow: 2px 2px black;
+    border: none;
 
 }
 #djswaxyrockheader p {
-    justify-self: left;
-    margin-left: 10px;
+    padding-left: 10px;
+    text-shadow: 1px 1px #aa076b;
 }
 
 #djswaxyrockstext {
     justify-self: center;
 
     background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
-    width: 330px;
+    width: 90%;
     height: 80px;
     text-shadow: 1px 1px black;
 
@@ -124,7 +150,7 @@ ul.topnav a img {
     background-size: cover;
     white-space: pre-wrap;
 
-    max-height: 500px;  /* Maks høyde før scrollbar dukker opp */
+    max-height: 300px;  /* Maks høyde før scrollbar dukker opp */
     overflow-y: auto;   /* Lager scrollbar hvis teksten er for lang */
     padding: 10px;      /* Litt luft så teksten ikke klistrer seg til kanten */
     border: 2px solid black; /* Valgfritt: gjør boksen tydeligere */
@@ -135,10 +161,31 @@ ul.topnav a img {
 }
 #DagensDigt {
 
-    color: black;
-    background-color: rgba(255,255,255,0.3);
-    text-decoration: underline;
-    text-decoration-style: wavy ;
+    font-family: Punk, serif;
+    font-size: 50px;
+    margin: auto 30px 0 0;
+
+}
+#bromance {
+
+    width: 90%;
+}
+#radioDiv {
+    background-image: url("./localresources/kasetter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+#radioDiv audio {
+    margin-top: 170px;
+}
+#foxpoemtop {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    align-self: flex-end;
+
+
 }
 #tarotmeaninglink {
     display: none;
@@ -166,7 +213,7 @@ ul.topnav a img {
 
     margin: 0 auto ;
     width: 100%;
-    height: 1080px;
+    height: 1200px;
 
 }
 .headleft{
@@ -209,6 +256,7 @@ ul.topnav a img {
     border: solid 10px darkblue;
     background-color: blueviolet;
     width: 33%;
+    box-shadow: 10px 10px black;
 }
 
 .leftdiv{
@@ -217,6 +265,7 @@ ul.topnav a img {
     background-color: blueviolet;
     border: solid 10px darkblue;
     width: 33%;
+    box-shadow: 10px 10px black;
 
 
 
@@ -238,6 +287,7 @@ ul.topnav a img {
     margin-bottom: 20px;
     width: 100%;
     height: 350px;
+    box-shadow: 10px 10px black;
 
 }
 .ChatDiv {
@@ -250,6 +300,7 @@ ul.topnav a img {
     display: flex;
     flex-direction: column;
     background-color: blueviolet;
+    box-shadow: 10px 10px black;
 }
 #chattext{
     display: flex;
@@ -265,6 +316,23 @@ ul.topnav a img {
     display: flex;
     flex-direction: column;
 }
+#TopTrioHeaderDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#leftHeaderDiv {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+
+}
+#rightHeaderDiv {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+
+}
 .CenterTopDiv {
     display: flex;
     flex-direction: row;
@@ -272,6 +340,9 @@ ul.topnav a img {
     justify-content: center;
     margin-bottom: 10px;
 
+}
+.theDoors {
+    color: #1976D2;
 }
 #githubButton {
     background-image: url("./localresources/githubpixelart.png") ;
@@ -317,18 +388,18 @@ ul.topnav a img {
 
 .GIFS {
 
-    margin: 0px 10px 0px 10px;
+
     height: 50px;
     width: 50px;
+    align-self: flex-end;
+    margin-top: auto;
+
 
 }
 a {
     background-color: white;
 }
-img {
-    box-shadow: black;
-    margin: 0px 10px 0px 10px;
-}
+
 #chatinput{
     width: 256px; height: 58px;
 }
