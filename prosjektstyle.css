@@ -3,6 +3,7 @@ html {
 }
 body {
     background-image: url("./localresources/realisticbackground.jpg");
+    overflow: visible;
 }
 @font-face {
     font-family: Silkscreen; /* set name */
@@ -19,6 +20,36 @@ body {
 @font-face {
     font-family: Punk;
     src: url(localresources/punk.ttf);
+}
+@keyframes shake{
+    0%{
+        transform:  rotate(0);
+    }
+    25%{
+        transform:  rotate(5deg);
+    }
+
+    50%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes POP{
+    0%{
+        transform:  rotate(0);
+    }
+    25%{
+        transform:  rotate(15deg);
+    }
+
+    50%{
+        transform: rotate(15deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
 }
 .prosjektcontainer {
     position: relative;
@@ -70,12 +101,55 @@ body {
     text-shadow: 3px 3px black;
 
 }
+#andemorbutton {
+    position: absolute;
+    top: 82%;
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Daydream, serif;
+    color: deepskyblue;
+    font-size: 20px;
+    border: none;
+    text-shadow: 3px 3px black;
+}
 
+#neocitiesbutton {
+    position: absolute;
+    top: 3%;
+    left: 65%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Daydream, serif;
+    color: yellow;
+    font-size: 15px;
+    border: none;
+    text-shadow: 3px 3px black;
+}
+#homebutton:hover {
+    animation: shake 2s infinite;
+}
+#andemorbutton:hover {
+    animation: shake 2s infinite;
+}
+#neocitiesbutton:hover {
+    animation: shake 2s infinite;
+}
 #rightTopDiv {
     position: relative;
+    overflow: visible;
+
 }
 #rightTopDiv:has(#homebutton:hover) #mascot {
     background-image: url("./localresources/mascothoverhome.png");
+}
+#rightTopDiv:has(#andemorbutton:hover) #mascot {
+    background-image: url("./localresources/mascotand.png");
+}
+#rightTopDiv:has(#neocitiesbutton:hover) #mascot {
+    background-image: url("./localresources/mascotneocities.png");
 }
 #mascot {
     width: 400px;
@@ -93,11 +167,13 @@ body {
 }
 #rightdiv {
     width: 50%;
+    overflow: visible;
 }
 #leftDiv {
     width: 50%;
     overflow: visible;
 }
+
 #litenbagPOP {
     height: 150px;
     width: 180px;
@@ -105,11 +181,17 @@ position: absolute;
     top: 0;
     left: 90%;
 }
+
 #arduinoPOP {
     height: 100px;
     width: 150px;
     position: absolute;
     top: -10%;
     left: 10%;
-
+}
+#litenbagPOP:hover {
+    animation: POP 2s infinite;
+}
+#arduinoPOP:hover {
+    animation: POP 2s infinite;
 }
