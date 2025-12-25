@@ -1,5 +1,5 @@
 body {
-    background-color: mediumaquamarine;
+    background-image: url("./localresources/realisticbackground.jpg");
 }
 @font-face {
     font-family: Silkscreen; /* set name */
@@ -18,9 +18,34 @@ body {
     src: url(localresources/punk.ttf);
 }
 .prosjektcontainer {
-    border: 1px solid black;
+    position: relative;
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: white;
+    font-weight: bold;
+
+    overflow: visible;
+    margin-top: 5px;
+    border: 10px solid black;
+
+}
+#p1 {
+    background-image: url("./localresources/cardback1.png");
+
+}
+#p2 {
+    background-image: url("./localresources/cardback2.png");
+
+}
+#p3 {
+    background-image: url("./localresources/cardback3.jpg");
+
+}
+#p4 {
+    background-image: url("./localresources/cardback4.jpg");
+
+}
+#p5 {
+    background-image: url("./localresources/cardback5.jpg");
 
 }
 .prosjektcontainer h3 {
@@ -39,6 +64,7 @@ body {
     color: #aa076b;
     font-size: 20px;
     border: none;
+    text-shadow: 3px 3px black;
 
 }
 
@@ -67,4 +93,20 @@ body {
 }
 #leftDiv {
     width: 50%;
+    overflow: visible;
+}
+#litenbagPOP {
+    height: 150px;
+    width: 180px;
+position: absolute;
+    top: 0;
+    left: 90%;
+}
+#arduinoPOP {
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    top: -10%;
+    left: 10%;
+
 }
