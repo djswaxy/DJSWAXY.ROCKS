@@ -1,3 +1,6 @@
+html {
+    cursor: url("localresources/momo.png"), auto;
+}
 body {
     background-image: url("./localresources/realisticbackground.jpg");
 }
