@@ -1,0 +1,202 @@
+body {
+    background-image: url("./localresources/jimbob2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@font-face {
+    font-family: Silkscreen; /* set name */
+    src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
+}
+@font-face {
+    font-family: Daydream;
+    src: url(localresources/Daydream.otf);
+}
+@font-face {
+    font-family: Gothik;
+    src: url(localresources/Gothik.ttf);
+}
+@font-face {
+    font-family: Punk;
+    src: url(localresources/punk.ttf);
+}
+@keyframes shake{
+    0%{
+        transform:  rotate(0);
+    }
+    25%{
+        transform:  rotate(5deg);
+    }
+
+    50%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes shake2{
+    0%{
+        transform:  rotate(-5deg);
+    }
+    25%{
+        transform:  rotate(5deg);
+    }
+
+    50%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
+#maincontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#venstrecontainer {
+    width: 33%
+}
+#midtcontainer {
+    display: flex;
+    justify-content: center;
+    width: 33%
+}
+#høyrecontainer {
+    width: 33%
+}
+#homebutton {
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Daydream, serif;
+    color: #aa076b;
+    font-size: 20px;
+    border: none;
+    text-shadow: 3px 3px black;
+
+}
+#andemorbutton {
+    position: absolute;
+    top: 82%;
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Daydream, serif;
+    color: deepskyblue;
+    font-size: 20px;
+    border: none;
+    text-shadow: 3px 3px black;
+}
+
+#neocitiesbutton {
+    position: absolute;
+    top: 3%;
+    left: 65%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Daydream, serif;
+    color: yellow;
+    font-size: 15px;
+    border: none;
+    text-shadow: 3px 3px black;
+}
+#tegnebutton {
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Daydream, serif;
+    color: red;
+    font-size: 15px;
+    border: none;
+    text-shadow: 3px 3px black;
+}
+#coolrocksbutton {
+    position: absolute;
+    top: 41%;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Daydream, serif;
+    color: darkslategray;
+    font-size: 15px;
+    border: none;
+    text-shadow: 3px 3px black;
+}
+
+.shakeme:hover {
+    animation: shake 2s infinite;
+}
+#rightTopDiv {
+    position: relative;
+    overflow: visible;
+
+}
+#rightTopDiv:has(#homebutton:hover) #mascot {
+    background-image: url("./localresources/mascothoverhome.png");
+}
+#rightTopDiv:has(#andemorbutton:hover) #mascot {
+    background-image: url("./localresources/mascotand.png");
+}
+#rightTopDiv:has(#neocitiesbutton:hover) #mascot {
+    background-image: url("./localresources/mascotneocities.png");
+}
+#rightTopDiv:has(#coolrocksbutton:hover) #mascot {
+    background-image: url("./localresources/mascotrocks.png");
+}
+#rightTopDiv:has(#tegnebutton:hover) #mascot {
+    background-image: url("./localresources/mascotart.png");
+}
+#mascot {
+    width: 400px;
+    height: 800px;
+    background-image: url("./localresources/mascot.png");
+    background-size: cover;
+
+}
+#wonderpic  {
+    background-image: url("./localresources/wonder.png");
+    background-size: contain;
+    width: 330px;
+    height: 250px;
+}
+#wonderpic:hover {
+    animation: shake 2s infinite;
+    background-image: url("./localresources/wonder2.png");
+}
+
+#postkorttxt {
+    font-family: Gothik;
+    color: black;
+    font-size: 40px;
+}
+.stamps {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+#stampsdiv {
+    display: flex;
+    flex-direction: column;
+
+}
+#stamprow1 {
+    display: flex;
+    flex-direction: row;
+}
+#stamprow2 {
+    display: flex;
+    flex-direction: row;
+}
+.stamp {
+    width: 99px;
+    height: 56px;
+}

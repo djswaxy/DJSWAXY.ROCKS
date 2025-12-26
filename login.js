@@ -22,7 +22,7 @@ async function logIn() {
             localStorage.setItem("FavColor", result.color);
 
             alert("Du er logget ind, " + result.username + "!");
-            window.location.href = "index.html"; // Redirect to home
+            window.location.href = "index1.html"; // Redirect to home
         } else {
             alert("Login failed: " + result.message);
         }
