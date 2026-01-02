@@ -276,8 +276,10 @@ ul.topnav a img {
     justify-content: left;
     list-style-type: none;
     color: wheat;
-    background-color: darkblue;
+    background-color: brown;
     padding: 0;
+    width: 100%;
+    box-shadow: 10px 0px black;
 
 }
 .headright p {
@@ -323,23 +325,23 @@ ul.topnav a img {
 
 }
 .righttopdiv{
-    background-color: white;
-    border: solid 10px darkblue;
+    background-color: grey;
+    border: solid 10px brown;
     flex-direction: column;
     margin-bottom: 20px;
-    width: 100%;
-    height: 350px;
+    width: 472px;
+    height: 500px;
     box-shadow: 10px 10px black;
 
 }
 .ChatDiv {
     background-color: darkblue;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 .rightbottomdiv {
     border: solid 10px darkblue;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: blueviolet;
     box-shadow: 10px 10px black;
@@ -370,6 +372,7 @@ ul.topnav a img {
 
 }
 #rightHeaderDiv {
+
     display: flex;
     flex-direction: column;
     width: 33%;
@@ -453,16 +456,17 @@ a {
     margin-left: 22px;
 }
 .ChatDivContent {
-    display: flex;
+    display: none;
     flex-direction: row;
 }
 #topchattext{
+    background-color: grey;
     text-shadow: 0.5px 0.5px black;
     justify-self: center;
 }
 
 #chatlog {
-
+    display: none;
     height: 250px;
     overflow-y: auto;
     width: 100%

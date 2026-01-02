@@ -181,6 +181,7 @@ body {
     font-family: Gothik;
     color: black;
     font-size: 40px;
+    padding-left: 60px;
 }
 .stamps {
     margin-left: 5px;
@@ -199,6 +200,11 @@ body {
     display: flex;
     flex-direction: row;
 }
+#stamprow3 {
+    display: flex;
+    flex-direction: row;
+
+}
 .stamp {
     width: 99px;
     height: 56px;
@@ -208,4 +214,15 @@ body {
     color: black;
     font-size: 10px;
     font-family: Daydream, Serif;
+}
+#djswaxystampcopy {
+    margin-top: 6px;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+}
+#minstamptekst {
+    font-weight: bold;
+    font-family: Daydream, serif;
+    font-size: 12px;
 }
