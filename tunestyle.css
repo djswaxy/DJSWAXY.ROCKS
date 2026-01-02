@@ -1,0 +1,60 @@
+body {
+    background-image: url("./localresources/discoelysium.png");
+    height: 1440px;
+}
+#maincontainer {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.textDiv {
+    width: 80%;
+}
+.tilted {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.tilted img {
+    margin: 10px 10px 10px 10px;
+}
+.tilted:hover {
+    border: 5px solid white;
+    width: 130%;
+    height: 130%;
+}
+#TiltMeDiv1 {
+    margin-top: 50px;
+    width: 700px;
+    height: 200px;
+    rotate: -10deg;
+    color: white;
+    background-color: brown;
+}
+#TiltMeDiv2 {
+    margin-top: 50px;
+    width: 700px;
+    height: 200px;
+    rotate: -3deg;
+    color: white;
+    background-color: brown;
+}
+#TiltMeDiv3 {
+    margin-top: 50px;
+    width: 700px;
+    height: 200px;
+    rotate: 3deg;
+    color: white;
+    background-color: brown;
+}
+#TiltMeDiv4 {
+    margin-top: 50px;
+    width: 700px;
+    height: 200px;
+    rotate: 10deg;
+    color: white;
+    background-color: brown;
+}
