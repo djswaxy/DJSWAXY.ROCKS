@@ -148,29 +148,12 @@ ul.topnav a img {
 }
 
 
-.DiktDiv {
-    background-image: url("./localresources/poetrywallpaper.jpg");
+#goToDagensDigt {
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    white-space: pre-wrap;
-
-    max-height: 300px;  /* Maks høyde før scrollbar dukker opp */
-    overflow-y: auto;   /* Lager scrollbar hvis teksten er for lang */
-    padding: 10px;      /* Litt luft så teksten ikke klistrer seg til kanten */
-    border: 2px solid black; /* Valgfritt: gjør boksen tydeligere */
+    color: white;
 }
-.DiktDiv p {
-    color: black;
-    background-color: rgba(255,255,255,0.3);
-}
-#DagensDigt {
 
-    font-family: Punk, serif;
-    font-size: 50px;
-    margin: auto 30px 0 0;
 
-}
 #bromance {
     background-image: url("./localresources/daleharry.png");
     width: 400px;
@@ -183,40 +166,66 @@ ul.topnav a img {
 }
 
 #radioDiv {
+
     display: flex;
     flex-direction: column;
-    background-image: url("./localresources/kasetter.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
     align-items: center;
+
+
 }
 #TrykkKasettTxt {
     font-family: Daydream, serif;
+
     margin-right: auto;
     margin-left: 30px;
-    text-shadow: 2px 2px black;
-    color: aquamarine;
+    font-size: 20px;
+    text-shadow: 3px 3px black;
+    color: yellow;
+    z-index: 5;
 }
 #Casette1 {
-    margin-top: 0px;
-    height: 300px;
-    width: 90%;
-    background-color: rgba(0,128,0,0.1);
+    margin-top: 100px;
+    height: 480px;
+    width: 480px;
+
+    background-image: url("./localresources/realcassette1.png");
+    z-index: 2;
+
 }
 #Casette2 {
 
-    height: 300px;
-    width: 90%;
-    background-color: rgba(0,128,0,0.1);
+    height: 480px;
+    width: 480px;
+    margin-top: -80px;
+    background-image: url("./localresources/realcassette2.png");
+    z-index: 3;
 }
 #Casette3 {
 
-    height: 500px;
-    width: 90%;
-    background-color: rgba(0,128,0,0.1);
+    height: 480px;
+    width: 480px;
+    margin-top: -80px;
+    background-image: url("./localresources/realcassette3.png");
+    z-index: 4;
 }
+.cassette {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transform: rotate3d(1,1,1,-30deg) scale(200%);
 
+
+}
+.cassette:hover {
+    transform: scale(150%);
+    z-index: 20 !important;
+}
 
 #radioDiv audio {
     margin-top: 170px;
@@ -306,7 +315,7 @@ ul.topnav a img {
 .leftdiv{
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
+    background-image: url("./localresources/woodentexture.jpg");
     border: solid 10px darkblue;
     width: 33%;
     box-shadow: 10px 10px black;

@@ -1,14 +1,24 @@
 body {
     background-image: url("./localresources/discoelysium.png");
     height: 1440px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#suprememaincontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 #maincontainer {
 
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
 
+}
+#rightcontainer {
+    width: 50%;
 }
 .textDiv {
     width: 80%;
@@ -17,20 +27,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: right;
+    transform: rotate3d(1,1,1,-30deg);
+    border: 10px groove gold;
+    box-shadow: -10px 10px black;
+
 }
 .tilted img {
     margin: 10px 10px 10px 10px;
 }
 .tilted:hover {
-    border: 5px solid white;
-    width: 130%;
-    height: 130%;
+    border: 10px groove gold;
+    margin-left: 200px;
+    transform: scale(150%);
+    z-index: 10;
+    box-shadow: none;
+
+
 }
 #TiltMeDiv1 {
     margin-top: 50px;
     width: 700px;
     height: 200px;
-    rotate: -10deg;
+
     color: white;
     background-color: brown;
 }
@@ -38,7 +56,7 @@ body {
     margin-top: 50px;
     width: 700px;
     height: 200px;
-    rotate: -3deg;
+
     color: white;
     background-color: brown;
 }
@@ -46,7 +64,7 @@ body {
     margin-top: 50px;
     width: 700px;
     height: 200px;
-    rotate: 3deg;
+
     color: white;
     background-color: brown;
 }
@@ -54,7 +72,45 @@ body {
     margin-top: 50px;
     width: 700px;
     height: 200px;
-    rotate: 10deg;
+
     color: white;
     background-color: brown;
+}
+.DiktDiv {
+    margin-top: 20px;
+    margin-right: 100px;
+    background-image: url("./localresources/poetrywallpaper.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    white-space: pre-wrap;
+    width: 400px;
+    max-height: 600px;  /* Maks høyde før scrollbar dukker opp */
+    overflow-y: auto;   /* Lager scrollbar hvis teksten er for lang */
+    padding: 10px;      /* Litt luft så teksten ikke klistrer seg til kanten */
+    border: 2px solid black; /* Valgfritt: gjør boksen tydeligere */
+}
+#diktTittel {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 50px;
+}
+#diktForfatter {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 30px;
+}
+#diktTekst {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 25px;
+
+}
+#DagensDigt {
+
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 30px;
 }
