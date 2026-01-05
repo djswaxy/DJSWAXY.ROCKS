@@ -1,8 +1,9 @@
 html {
-    cursor: url("/localresources/momo.png"), auto;
+
 }
 body {
-    background-image: url("./localresources/jimbob2.png");
+
+    background-image: url("./localresources/louiezong1.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -56,6 +57,8 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
+
 }
 #venstrecontainer {
     width: 33%
@@ -225,4 +228,39 @@ body {
     font-weight: bold;
     font-family: Daydream, serif;
     font-size: 12px;
+}
+#cursorRow {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    background-color: white;
+    width: 320px;
+}
+
+#cursormomo {
+    background-image: url("./localresources/momo.png");
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+}
+#cursorcat {
+    background-image: url("./localresources/regularcursor.png");
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+}
+#cursorcroc {
+    background-image: url("./localresources/cursorcroc.png");
+    width: 64px;
+    height: 64px;
+}
+#cursorninjastar {
+    background-image: url("./localresources/cursorshuriken.png");
+    width: 64px;
+    height: 64px;
+}
+#cursorwizard {
+    background-image: url("./localresources/cursorwizard.png");
+    width: 64px;
+    height: 64px;
 }
