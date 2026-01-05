@@ -218,12 +218,12 @@ ul.topnav a img {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    transform: rotate3d(1,1,1,-30deg) scale(200%);
+    transform: rotate3d(1,-2,-2,-30deg);
 
 
 }
 .cassette:hover {
-    transform: scale(150%);
+    transform: scale(110%);
     z-index: 20 !important;
 }
 
