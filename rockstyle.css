@@ -40,15 +40,15 @@ body {
 }
 #countDownDiv {
     background-image: url("./localresources/drdoom2.jpg");
-    width: 175px;
-    height: 100px;
+    width: 171px;
+    height: 97px;
     background-size: contain;
     background-repeat: no-repeat;
     border: 5px solid darkgreen;
 }
 #demo {
     color: darkgreen;
-    text-shadow: white 1px 1px;
+    text-shadow: 1px 1px black;
     text-align: left;
 }
 /* Style the topnav */
