@@ -224,6 +224,14 @@ ul.topnav a img {
     background-image: url("./localresources/realcassette3.png");
     z-index: 4;
 }
+#Casette4 {
+
+    height: 480px;
+    width: 480px;
+    margin-top: -80px;
+    background-image: url("./localresources/realcassette4.png");
+    z-index: 5;
+}
 .cassette {
     background-color: rgba(0,0,0,0);
     border: none;

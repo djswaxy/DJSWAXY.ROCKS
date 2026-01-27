@@ -46,7 +46,7 @@ document.addEventListener('play', function(e){
 const Sound1 = document.getElementById("Silverflame");
 const Sound2 = document.getElementById("SpaceOddity");
 const Sound3 = document.getElementById("SuspendedInGaffa");
-
+const Sound4 = document.getElementById("AwesomeMixVol1");
 
 
 function Toggle1() {
@@ -58,6 +58,10 @@ function Toggle2() {
 function Toggle3() {
     return Sound3.paused ? Sound3.play() : Sound3.pause();
 }
+function Toggle4() {
+    return Sound4.paused ? Sound4.play() : Sound4.pause();
+}
+
 
 function getdata() {
     fetch("./chatlog.json?v=" + Date.now())
