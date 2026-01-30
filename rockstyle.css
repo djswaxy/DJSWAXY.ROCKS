@@ -204,7 +204,7 @@ ul.topnav a img {
     height: 480px;
     width: 480px;
 
-    background-image: url("./localresources/realcassette1.png");
+    background-image: url("./localresources/KAS1.png");
     z-index: 2;
 
 }
@@ -213,7 +213,7 @@ ul.topnav a img {
     height: 480px;
     width: 480px;
     margin-top: -80px;
-    background-image: url("./localresources/realcassette2.png");
+    background-image: url("./localresources/KAS2.png");
     z-index: 3;
 }
 #Casette3 {
@@ -221,7 +221,7 @@ ul.topnav a img {
     height: 480px;
     width: 480px;
     margin-top: -80px;
-    background-image: url("./localresources/realcassette3.png");
+    background-image: url("./localresources/KAS3.png");
     z-index: 4;
 }
 #Casette4 {
@@ -229,7 +229,7 @@ ul.topnav a img {
     height: 480px;
     width: 480px;
     margin-top: -80px;
-    background-image: url("./localresources/realcassette4.png");
+    background-image: url("./localresources/KAS4.png");
     z-index: 5;
 }
 .cassette {
