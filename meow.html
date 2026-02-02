@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="meowcss.css">
     <meta charset="UTF-8">
     <title>Title</title>
     <h1>Meow!</h1>
 </head>
 <body>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<div id="top">
+    <h2 class="headline"> dsjwaxy.rocks</h2>
+    <div class="intro_block">
+        <h3 class="subhead">Experience the Ocean
+            <br>Like Never Before</h3>
+        <p class="intro">Underwater
+            Adventure Park is an experience
+            unlinke anything you have ever
+            had. Travel to the depths of
+            the Ocean and walk among the
+            Sea Life!</p>
+    </div>
 
+</div>
+<div class="bg">
+
+    <div id="left">
+
+    </div>
+    <div class="middle"></div>
+
+    <div id="right">
+
+    </div>
+</div>
+<model-viewer src="cat_-_ps1_low_poly_rigged.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="displacementFilter">
+        <feTurbulence type="turbulence"
+                      baseFrequency="0.004" numOctaves=
+                              "5" result="turbulence" />
+        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R"
+                           yChannelSelector="G" result="disp" />
+    </filter>
+</svg>
 <script src="globalSession.js"></script>
 </body>
 </html>

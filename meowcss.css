@@ -1,0 +1,27 @@
+svg {
+    display: none;
+}
+h2 {
+    font-size: 5.5vw;
+    font-family: 'Crete Round', serif;
+}
+.headline {
+    justify-self: center;
+    line-height: 0;
+    display: inline-block;
+    padding: 70px;
+    color: darkslateblue;
+    filter: url(#displacementFilter);
+    transform: translate3d(0, 0, 0);
+    transform: scaleY(1.8) rotateY(-2deg);
+}
+
+.bg {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#top {
+    display: flex;
+    width: 100%;
+}
