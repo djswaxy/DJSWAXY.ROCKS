@@ -4,47 +4,53 @@
     <link rel="stylesheet" href="meowcss.css">
     <meta charset="UTF-8">
     <title>Title</title>
-    <h1>Meow!</h1>
 </head>
 <body>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-<div id="top">
-    <h2 class="headline"> dsjwaxy.rocks</h2>
-    <div class="intro_block">
-        <h3 class="subhead">Experience the Ocean
-            <br>Like Never Before</h3>
-        <p class="intro">Underwater
-            Adventure Park is an experience
-            unlinke anything you have ever
-            had. Travel to the depths of
-            the Ocean and walk among the
-            Sea Life!</p>
+<div id="topsection">
+    <div id="topL">
+        <h2 class="headline">cool rocks™</h2>
     </div>
-
+    <div id="topR">
+    </div>
 </div>
-<div class="bg">
+
+
+<div class="BODY">
 
     <div id="left">
-
+        <div class="mineralbuy">
+            <h3 id="getyourUranium">get your ©certified Uranium ;-P</h3>
+            <img id="mcUranium" src="./localresources/uranium.jpg" alt="mcuranium">
+            <p class="priceTag">€2.99</p>
+        </div>
+        <div class="mineralbuy">
+            <h3 >bbbbbBismuth!</h3>
+            <img id="bismuthpic" src="./localresources/bismuth.png" alt="bismuth">
+            <p class="priceTag">€4.59</p>
+        </div>
     </div>
-    <div class="middle"></div>
+    <div id="middle">
+        <div class="mineralbuy">
+            <h3 >quartz, klokkemineralet</h3>
+            <img id="quartzpic" src="./localresources/quartz.png" alt="quartz">
+            <p class="priceTag">€9.25</p>
+        </div>
+        <div class="mineralbuy">
+            <h3 >stibnite :-)</h3>
+            <img id="stibnitepic" src="./localresources/stibnite.png" alt="stibnite">
+            <p class="priceTag">€1.11</p>
+        </div>
+    </div>
 
     <div id="right">
-
+        <img id="godkjent" src="localresources/godkjent.png" alt="godkjent">
+        <img id="mobilepaybutton" src="./localresources/mobilepaybutton.png" alt="mobilepay">
     </div>
 </div>
-<model-viewer id=cat3d src="cat_-_ps1_low_poly_rigged.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-    </div>
-</model-viewer>
-
+<div id="cat">
+    <model-viewer id=cat3d src="cat_-_ps1_low_poly_rigged.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+    </model-viewer>
+</div>
 
 
 
@@ -57,6 +63,7 @@
                            yChannelSelector="G" result="disp" />
     </filter>
 </svg>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 <script src="globalSession.js"></script>
 </body>
 </html>

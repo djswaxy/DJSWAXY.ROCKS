@@ -1,11 +1,49 @@
 svg {
     display: none;
 }
+#godkjent {
+
+    width: 300px;
+    height: 200px;
+}
 h2 {
     font-size: 5.5vw;
     font-family: 'Crete Round', serif;
 }
+.priceTag {
+    color: yellow;
+    text-shadow: 1px 1px red;
+    background-color: darkblue;
+    font-size: 30px;
+
+    animation: shake 2s infinite;
+}
+.mineralbuy {
+        position: relative;
+
+}
+.mineralbuy p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mineralbuy img{
+    width: 250px;
+    height: 250px;
+}
+#getyourUranium {
+    font-family: 'Crete Round', serif;
+}
+#mcUranium {
+    width: 200px;
+    height: 200px;
+}
+#mcUranium:hover {
+    transform: scale(1.2) rotate3d(4, 5, 6, 25deg);;
+}
 .headline {
+    margin-left: 70px;
     justify-self: center;
     line-height: 0;
     display: inline-block;
@@ -16,17 +54,80 @@ h2 {
     transform: scaleY(1.8) rotateY(-2deg);
 }
 
-.bg {
+.BODY {
     width: 100%;
     display: flex;
     flex-direction: row;
 }
-#top {
+#left {
+    width: 33%;
     display: flex;
-    width: 100%;
+    flex-direction: column;
+
+}
+#middle {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+
+}
+#right {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+
+}
+#topsection {
+    display: flex;
+    flex-direction: row;
+}
+#topL {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+#topR {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 #cat3d {
     width: 1000px;
     height: 1000px;
     z-index: -1;
+}
+#getyourUranium {
+    color: lawngreen;
+    text-shadow: 2px 2px darkseagreen;
+}
+@keyframes shake{
+    0%{
+        transform:  rotate(0deg);
+    }
+    20%{
+        transform:  rotate(0deg);
+    }
+
+    40%{
+        transform: rotate(4deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    80%{
+        transform: rotate(-4deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+#mobilepaybutton {
+    margin-top: 10px;
+    width: 175px;
+    height: 75px;
+    border-radius: 15px;
+}
+#mobilepaybutton:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px black;
 }
