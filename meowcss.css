@@ -25,3 +25,8 @@ h2 {
     display: flex;
     width: 100%;
 }
+#cat3d {
+    width: 1000px;
+    height: 1000px;
+    z-index: -1;
+}

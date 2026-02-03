@@ -59,12 +59,24 @@
     <button id="cursorninjastar"></button>
         <button id="cursorwizard"></button>
     </div>
+
 </div>
 </div>
+
 <footer>
     background by <a href="https://www.louiezong.com">louie zong</a>
+    <a href="meow.html" id="uranium">!BUY YOUR TOP QUALITY TASTY URANIUM HERE!</a>
 </footer>
 
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="displacementFilter">
+        <feTurbulence type="turbulence"
+                      baseFrequency="0.004" numOctaves=
+                              "5" result="turbulence" />
+        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R"
+                           yChannelSelector="G" result="disp" />
+    </filter>
+</svg>
 
 <script src="indexscript.js"></script>
 </body>
