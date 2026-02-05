@@ -1,0 +1,1 @@
+const MONGOKEY = 'mongodb+srv://emilostberg23_db_user:Vovov123%21%23%23%21@djswaxycluster.ml4pmmq.mongodb.net/?appName=djswaxycluster';

@@ -9,7 +9,7 @@ let isLoggedIn = false;
 app.use(express.json()); // Lar serveren forstå JSON som kommer inn
 app.use(express.static('./')); // Serverer html-filen og json-filen din
 
-mongoose.connect('mongodb+srv://emilostberg23_db_user:Vovov123%21%23%23%21@djswaxycluster.ml4pmmq.mongodb.net/?appName=djswaxycluster')
+mongoose.connect(MONGOKEY)
     .then(() => console.log("Connected to MongoDB!"))
     .catch(err => console.error("Could not connect to MongoDB:", err));
 
