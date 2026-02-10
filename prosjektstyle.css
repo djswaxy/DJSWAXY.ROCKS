@@ -5,6 +5,7 @@ body {
     background-image: url("./localresources/realisticbackground.jpg");
     overflow: visible;
 }
+
 @font-face {
     font-family: Silkscreen; /* set name */
     src: url(localresources/Silkscreen-Regular.ttf); /* url of the font */
@@ -215,4 +216,10 @@ position: absolute;
     width: 250px;
     height: 250px;
     margin-right: 10px;
+}
+.leBUTTONS {
+    background-color: #1976D2;
+    color: white;
+    font-family: Daydream, serif;
+    text-shadow: 1px 1px black;
 }

@@ -6,7 +6,7 @@ if (localStorage.getItem("currentUser")) {
     // Optional: Alert them so they know why they were redirected
     alert("You are already logged in! Redirecting to home...");
 
-    // 2. Redirect to index1.html (or coolrocks.html)
+    // 2. Redirect to index1.html (or coolrocks-old.html)
     window.location.href = "index1.html";
 }
 function shuffleWallpaper() {
