@@ -60,9 +60,6 @@ ul.topnav {
     list-style-type: none;
     margin: 0 0 10px 0;
     padding: 0;
-
-
-
 }
 ul.topnav a {
     display: block;
@@ -73,7 +70,9 @@ ul.topnav a {
     text-decoration-style: wavy ;
     font-family: Daydream, serif;
 }
-
+ul.topnav a:hover {
+    color:yellow;
+}
 ul.topnav a img {
     display: block;
     color: wheat;

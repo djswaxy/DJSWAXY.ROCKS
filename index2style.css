@@ -45,6 +45,10 @@ footer {
     font-family: Punk;
     src: url(localresources/punk.ttf);
 }
+@font-face {
+    font-family: Alkhemikal;
+    src: url(localresources/Alkhemikal.ttf);
+}
 @keyframes shake{
     0%{
         transform:  rotate(0);
@@ -74,6 +78,12 @@ footer {
     100%{
         transform: rotate(5deg);
     }
+}
+#warning {
+    font-family: Alkhemikal, serif;
+    text-shadow: 2px 2px black;
+    color: white;
+    background-color: black;
 }
 #maincontainer {
     display: flex;
