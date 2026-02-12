@@ -83,7 +83,15 @@ footer {
     font-family: Alkhemikal, serif;
     text-shadow: 2px 2px black;
     color: white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#warningDiv {
+    background-image: url("./localresources/pixelartsverd.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    width: 300px;
+    height: 100px;
+
 }
 #maincontainer {
     display: flex;
